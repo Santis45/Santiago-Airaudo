@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP - JS </title>
+</head>
+<body>
+    <!--/////////////////////////// EJERCICIO 1//////////////////////////-->
+    <h5> Ejercicio 1 </h5>
+    
+    <label for="ej1-c1">Numero 1: </label>
+    <input type="number" id="ej1-c1">
+
+    <label for="ej1-c2">Numero 2: </label>
+    <input type="number" id="ej1-c2">
+
+    <label for="ej1-c3">Numero 3: </label>
+    <input type="number" id="ej1-c3"> 
+    
+    <button onclick="func_ej1()">Comparar</button>
+
+    <label for="ej1_resultado">Resultado</label>
+    <input type="text" id="ej1_resultado">
+
+    <script>
+        function func_ej1(){
+            let ej1_c1 = parseFloat(document.getElementById("ej1-c1").value);
+            let ej1_c2 = parseFloat(document.getElementById("ej1-c2").value);
+            let ej1_c3 = parseFloat(document.getElementById("ej1-c3").value);
+
+            let ej1_suma = ej1_c1 + ej1_c2 + ej1_c3
+            
+            document.getElementById("ej1_resultado").value = ej1_suma
+
+        }
+    </script>
+    <!--/////////////////////////// EJERCICIO 1//////////////////////////-->
+
+    <!--/////////////////////////// EJERCICIO 2//////////////////////////-->
+    
+    <h5>Ejercicio 2</h5>
+    <label for="ej2-c1">Numero 1: </label>
+    <input type="number" id="ej2-c1">
+
+    <label for="ej2-c2">Numero 2: </label>
+    <input type="number" id="ej2-c2">
+
+    <label for="ej2-c3">Numero 3: </label>
+    <input type="number" id="ej2-c3"> 
+
+    <button onclick="func_ej02()">Resultado</button>
+    <label for="ej2_resultado">Resultado</label>
+    <input type="text" id="ej2_resultado">
+    <!-- COMMENT EN HTML-->
+
+    <script>
+        
+       // Funcion del EJ2
+        function func_ej02(){
+            let ej2_c1 = parseFloat(document.getElementById("ej2-c1").value);
+            let ej2_c2 = parseFloat(document.getElementById("ej2-c2").value);
+            let ej2_c3 = parseFloat(document.getElementById("ej2-c3").value);
+
+            if ((ej2_c1 > ej2_c2) && (ej2_c1 > ej2_c3))
+            document.getElementById("ej2_resultado").value = "El Mayor valor es el C1";
+            else
+            if (ej2_c2 > ej2_c3)
+            document.getElementById("ej2_resultado").value = "El Mayor valor es el C2";
+            else
+            document.getElementById("ej2_resultado").value = "El mayor valor es el C3";
+        }
+    </script>
+    <!--/////////////////////////// EJERCICIO 2//////////////////////////-->
+
+    <!--/////////////////////////// EJERCICIO 3//////////////////////////-->
+    <h5> Ejercicio 3</h5>
+
+    <label for ="ej3_c1">Palabra: </label>
+    <input type="text" id ="ej3_c1">
+
+    <label for ="ej3_c2">Numero: </label>
+    <input type="number" id ="ej3_c2">
+
+    <button onclick="func_ej03()">Resultado</button>
+    <label for="ej3_resultado">Resultado</label>
+    <input type="text" id ="ej3_resultado">
+
+    <script>
+
+        function func_ej03(){
+            let suma = 0
+            let ej3_c1 = (document.getElementById("ej3_c1").value);
+            let ej3_c2 = parseFloat(document.getElementById("ej3_c2").value);
+            let ej3_acu1 = ej3_c1
+            for (let index = 1; index < ej3_c2; index++) {
+                ej3_acu1 = ej3_acu1 + ej3_c1
+            }
+            alert(ej3_acu1) 
+
+        }
+    </script>
+
+    <!--/////////////////////////// EJERCICIO 4//////////////////////////-->
+    <h5> Ejercicio 4</h5>
+    
+    <label for ="ej4_c1">Grados Centígrados </label>
+    <input type="number" id ="ej4_c1">
+
+    <label for ="ej4_c2">Grados Farenheit </label>
+    <input type="number" id ="ej4_c2">
+
+    <button onclick="func_ej04()"> Convertir </button>
+    <label for="ej4_resultado"> Resultado: </label>
+    <input type="number" id ="ej4_resultado">
+
+    <script>
+       function func_ej04(){
+
+            let ej4_c1 = parseFloat(document.getElementById("ej4_c1").value);
+            let ej4_c2 = parseFloat(document.getElementById("ej4_c2").value);
+
+            if (ej4_c1 != "" ){
+            ej4_resultado = ((ej4_c1*1.8)+32);
+            document.getElementById("ej4_resultado").value = ej4_resultado;
+            }
+            else
+            if (ej4_c2 != "")
+            ej4_resultado = ((ej4_c2-32)*0.5556);
+            document.getElementById("ej4_resultado").value = ej4_resultado;
+
+        }
+
+    </script>
+
+    <!--/////////////////////////// EJERCICIO 4////////////////////////// -->
+
+    <!--/////////////////////////// EJERCICIO 5////////////////////////// -->
+    <h5> Ejercicio 5 </h5>
+    
+    <label for ="ej5_c1"> Palabra: </label>
+    <input type="text" id ="ej5_c1">
+    
+
+    <button onclick="func_ej05()">Contar caracteres</button>
+    <label for="ej5_resultado"> Resultado: </label>
+    <input type="text" id ="ej5_resultado">
+    
+    <script>
+    function func_ej05()
+    {
+       let ej5_c1 = document.getElementById("ej5_c1").value;
+       tostring(ej5_c1)
+       let ej5_letras = ej5_c1.lenght
+        alert(ej5_letras)
+       document.getElementById("ej5_resultado").value = ej5_c1.lenght
+        }
+
+    </script>
+    
+
+    <!--/////////////////////////// EJERCICIO 5////////////////////////// -->
+
+
+    <!--/////////////////////////// EJERCICIO 6////////////////////////// -->
+    <h5>Ejercicio 6 </h5>
+    <label for ="ej6_c1"> Numero: </label>
+    <input type="number" id ="ej6_c1">
+    <button onclick="func_ej06()"> ¿Es par o impar?</button>
+    <label for="ej6_resultado"> Resultado: </label>
+    <input type="text" id ="ej6_resultado">
+    <script>
+    function func_ej06() {
+    let ej6_c1 = parseFloat(document.getElementById("ej6_c1").value);
+    ej6_c1 = ej6_c1 % 2
+    if (ej6_c1 == 0)
+    document.getElementById("ej6_resultado").value = "El numero es par";
+    else
+    document.getElementById("ej6_resultado").value = "El numero es impar";
+    }
+</script>
+    <!--/////////////////////////// EJERCICIO 6////////////////////////// -->
+
+
+    <!--/////////////////////////// EJERCICIO 7////////////////////////// -->
+
+    <h5>Ejercicio 7</h5>
+    <label for ="ej7_c1"> Primer Número: </label>
+    <input type="number" id ="ej7_c1">
+    <label for ="ej7_c2"> Segundo Número: </label>
+    <input type="number" id ="ej7_c2">
+    <button onclick="func_ej07()"> Mostrar los múltiplos de tres entre ellos</button>
+
+    <script>
+        function func_ej07(){
+            
+            let ej7_c1 = parseInt(document.getElementById("ej7_c1").value);
+            let ej7_c2 = parseInt(document.getElementById("ej7_c2").value);
+            
+            for (let index = ej7_c1; index < ej7_c2; index++) {
+                if(ej7_c1 % 3 == 0)
+                alert(ej7_c1)
+                ej7_c1 = ej7_c1 + 1
+                ;  
+            }
+
+        }
+    </script>
+    <!--/////////////////////////// EJERCICIO 7////////////////////////// -->
+    
+
+    <!--/////////////////////////// EJERCICIO 8////////////////////////// -->
+    <h5>Ejercicio 8</h5>
+
+    <label for ="ej8_c1"> Primer Número: </label>
+    <input type="number" id ="ej8_c1">
+    <label for ="ej8_c2"> Segundo Número: </label>
+    <input type="number" id ="ej8_c2">
+    <button onclick="func_ej08()"> Mostrar los números primos entre ellos</button>
+
+    <script>
+        function func_ej08(){
+            
+            let ej8_c1 = parseInt(document.getElementById("ej8_c1").value);
+            let ej8_c2 = parseInt(document.getElementById("ej8_c2").value);
+            let cont = 1
+            for (let index = ej8_c1; index < ej8_c2; index++) {
+                if (((ej8_c1 % cont)== 0) ||((ej8_c1 == cont))){
+                alert(cont)
+                cont=cont+1    
+                }
+                else
+                cont = cont + 1
+               ;
+                
+            }
+
+                
+            }
+            
+
+        
+    </script>
+    <!--/////////////////////////// EJERCICIO 8////////////////////////// -->
+
+
+    <!--/////////////////////////// EJERCICIO 9////////////////////////// -->
+    <h5>Ejercicio 9</h5>
+    <label for="ej9_c1">Nombre </label>
+    <input type="text" id="ej9_c1">
+    <label for="ej9_c2">Apellido </label>
+    <input type="text" id="ej9_c2">
+    <label for="ej9_c3">Edad </label>
+    <input type="text" id="ej9_c3">
+    <label for="ej9_c4">Ciudad </label>
+    <input type="text" id="ej9_c4">
+    <button onclick="func_ej09()">Formar oración </button>
+    <script>
+        function func_ej09(){
+            let ej9_c1 = document.getElementById("ej9_c1").value;
+            let ej9_c2 = document.getElementById("ej9_c2").value;
+            let ej9_c3 = document.getElementById("ej9_c3").value;
+            let ej9_c4 = document.getElementById("ej9_c4").value;
+            ej9_resultado =  "Mi nombre es " + ej9_c1 + " " + ej9_c2 + ", tengo " + ej9_c3 + " Años." + " Nací en la ciudad de " + ej9_c4 + "."
+            alert(ej9_resultado);
+        }
+    </script>
+    <!--/////////////////////////// EJERCICIO 9////////////////////////// -->
+
+
+    <!--/////////////////////////// EJERCICIO 10////////////////////////// -->
+    <h5>Ejercicio 10</h5>
+    <label for ="ej10_c1"> Primer Número: </label>
+    <input type="number" id ="ej10_c1">
+    <label for ="ej10_c2"> Segundo Número: </label>
+    <input type="number" id ="ej10_c2">
+    <button onclick="func_ej10()"> Mostrar números que los separan</button>
+
+    <script>
+        function func_ej10()
+        {
+            let ej10_c1 = parseInt(document.getElementById("ej10_c1").value);
+            let ej10_c2 = parseInt(document.getElementById("ej10_c2").value);
+            let ej10_resultado = ej10_c1
+
+            for (let index = ej10_c1; index <= ej10_c2; index++) {
+                alert(ej10_resultado)
+                ej10_resultado = ej10_resultado + 1  
+                  
+            }
+        }
+    </script>
+    <!--/////////////////////////// EJERCICIO 10////////////////////////// -->
+</body>
+</html>
